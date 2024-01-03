@@ -2,6 +2,7 @@ package com.example.backgroundlocationtracker
 
 import android.Manifest
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -18,14 +19,22 @@ class MainActivity : AppCompatActivity() {
 
         // Set the layout for the activity
         setContentView(R.layout.activity_main)
-
+        val permissions = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            arrayOf(
+                Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.POST_NOTIFICATIONS
+            )
+        } else {
+            arrayOf(
+                Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.ACCESS_FINE_LOCATION,
+            )
+        }
         // Request location permissions when the activity is created
         ActivityCompat.requestPermissions(
             this,
-            arrayOf(
-                Manifest.permission.ACCESS_COARSE_LOCATION,
-                Manifest.permission.ACCESS_FINE_LOCATION
-            ), 0
+            permissions, 0
         )
     }
 

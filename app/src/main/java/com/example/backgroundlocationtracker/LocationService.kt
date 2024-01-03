@@ -71,7 +71,7 @@ class LocationService : Service() {
             .setContentTitle("Tracking...")
             .setContentText("Location : null")
             .setSmallIcon(R.drawable.ic_launcher_background).setOnlyAlertOnce(true)
-            .setOngoing(true)
+            .setOngoing(true)//If your app shows non-dismissable foreground notifications to users, Android 14 has changed the behavior to allow users to dismiss such notifications.
 
         // Get the notification manager
         val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
