@@ -1,4 +1,4 @@
-# Background Location Tracker Demo
+# Background Location Tracker
 
 Background Location Tracker is a demonstration Android application that showcases how to track the device's location in the background using the Fused Location Provider API. The app utilizes a foreground service to ensure location updates even when the app is in the background.
 
