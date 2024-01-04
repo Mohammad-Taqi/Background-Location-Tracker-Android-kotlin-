@@ -82,6 +82,4 @@ Ensure that the following permissions and service declaration are present in you
 
 ## References
 
-- [YouTube Tutorial](https://youtu.be/YZL-_XJSClc?si=YWrIiUvIyXZovvUM) - I Followed this tutorial to create this demo i.e Background Location Tracker.
-
-```
+- [YouTube Tutorial](https://youtu.be/YZL-_XJSClc?si=YWrIiUvIyXZovvUM) - I Followed this tutorial to create this demo.
